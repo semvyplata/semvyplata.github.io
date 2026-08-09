@@ -86,6 +86,23 @@ footer b{color:var(--txt)}
 a{color:var(--accent)}
 .pmline{display:flex;align-items:center;gap:8px;margin-top:8px}
 .pmline input{max-width:130px}
+.product{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:20px 18px;margin-top:24px}
+.tag{display:inline-block;background:rgba(61,220,132,.12);border:1px solid rgba(61,220,132,.35);
+  color:var(--accent);padding:5px 11px;border-radius:99px;font-size:12px;font-weight:700}
+.product h3{font-size:19px;line-height:1.25;margin:13px 0 8px;letter-spacing:-.01em}
+.product p{font-size:14.5px;color:var(--dim);margin:0}
+.price{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin:18px 0 2px}
+.price b{font-size:34px;font-weight:800;letter-spacing:-.03em}
+.price s{color:var(--dim);font-size:16px}
+.incl{list-style:none;padding:0;margin:16px 0 0}
+.incl li{padding:9px 0 9px 25px;position:relative;font-size:14.5px;border-top:1px solid var(--line)}
+.incl li:before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:700}
+.delivery{background:var(--card2);border:1px solid var(--line);border-radius:10px;
+  padding:13px 14px;margin-top:16px;font-size:13.5px;color:var(--dim);line-height:1.5}
+.delivery b{color:var(--txt)}
+.docs{margin-top:12px;font-size:12.5px;color:var(--dim);text-align:center}
+.req{margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}
 </style>
 </head>
 <body>
@@ -269,6 +286,34 @@ a{color:var(--accent)}
     <label class="chk" style="cursor:default"><span>Работающий пенсионер тоже может<small>Если платил НДФЛ и проходит по остальным условиям.</small></span></label>
     <label class="chk" style="cursor:default"><span>Выплата не отнимет единое пособие<small>Она не учитывается как доход при назначении других мер поддержки.</small></span></label>
   </div>
+
+  <div class="product" id="product">
+    <span class="tag">Платный материал</span>
+    <h3>«Чистое заявление» — как подать, чтобы не отказали</h3>
+    <p>PDF со скриншотами каждого экрана Госуслуг: как заполнить заявление, чтобы СФР не отказал
+    по имуществу, доходу или срокам. Разбор условий назначения, требований к документам
+    и типичных причин отказа. Материал информационный — это не налоговая, не юридическая
+    и не финансовая консультация, представительство в госорганах не оказывается.</p>
+
+    <div class="price"><b>490 ₽</b><s>1 490 ₽</s><span class="hint" style="margin:0">первым 50 покупателям</span></div>
+
+    <ul class="incl">
+      <li>Инструкция по подаче через Госуслуги, экран за экраном</li>
+      <li>Таблица порогов дохода по 89 регионам</li>
+      <li>Памятка для семей военнослужащих: как подтвердить доход за 10 рабочих дней</li>
+      <li>Шпаргалка «Что сказать в СФР по телефону»</li>
+      <li>Как второму родителю получить вторую выплату на ту же семью</li>
+    </ul>
+
+    <div class="delivery"><b>Как получите.</b> Товар цифровой, доставка курьером не предусмотрена.
+    Сразу после оплаты на электронную почту, указанную при оплате, приходит письмо со ссылкой
+    на PDF — обычно в течение 5 минут, максимум в течение 24 часов. Если письмо не пришло,
+    напишите на почту из подвала страницы: пришлю файл вручную. Возврат — в течение 7 дней
+    по запросу на ту же почту.</div>
+
+    <a class="cta" id="buy" href="#product" rel="noopener">Купить за 490 ₽<small>Оплата картой, чек самозанятого приходит на почту</small></a>
+    <p class="docs">Оплата означает согласие с <a href="oferta.html">офертой</a> и <a href="privacy.html">политикой конфиденциальности</a></p>
+  </div>
 </div>
 
 <footer>
@@ -280,14 +325,26 @@ a{color:var(--accent)}
   Основания: Федеральный закон от 13.07.2024 № 179-ФЗ; постановление Правительства РФ от 27.12.2025 № 2173.
   Величины прожиточного минимума за 2025 год — по данным СФР и официальных актов субъектов РФ.
   Заявление подаётся с 1 июня до 1 октября года, следующего за годом дохода, через Госуслуги, МФЦ или отделение СФР.
-  <br><br>
-  Бакулин Александр Николаевич  <br><br>
-  ИНН 434522799907
+
+  <div class="req">
+    <b>Продавец.</b> Бакулин Александр Николаевич, плательщик налога на профессиональный доход (самозанятый).<br>
+    ИНН 434522799907<br>
+    Адрес: 610011, Кировская область, г. Киров<br>
+    Почта: <a href="mailto:dragonart012@hotmail.com">dragonart012@hotmail.com</a> · Телефон: <a href="tel:+79952467008">+7 995 246-70-08</a><br>
+    Отвечаю в будни с 10:00 до 19:00 МСК.
+    <div style="margin-top:10px">
+      <a href="oferta.html">Публичная оферта</a> · <a href="privacy.html">Политика конфиденциальности</a>
+    </div>
+  </div>
 </footer>
 
 <script>
-// Ссылка на страницу продажи. Замените, если сменится адрес.
-const SALES_URL = "https://docs.google.com/document/d/1fsJamonmy2x1tQVYPZX0lDnmjGFHOmcSQgS_TRWF5sg/preview";
+// Куда ведёт кнопка в результате расчёта. Блок продукта на этой же странице:
+// товар и цена должны быть на сайте, иначе платёжная система не подключит приём оплаты.
+const SALES_URL = "#product";
+
+// Ссылка на оплату из ЮKassa. Подставьте после подключения кассы.
+const PAY_URL = "";
 
 const REGIONS = [
 ["Москва",23908],["Московская область",19302],["Санкт-Петербург",19329],["Ленинградская область",18974],
@@ -495,15 +552,17 @@ document.getElementById('calc').addEventListener('click', () => {
         'отдельное основание для отказа, и об этом не предупреждают ни на Госуслугах, ни в уведомлении.' +
         '</div>';
 
-    html += '<a class="cta" href="' + SALES_URL + '" target="_blank" rel="noopener">' +
+    html += '<a class="cta" href="' + SALES_URL + '" rel="noopener">' +
       'Как подать, чтобы не отказали' +
-      '<small>Пошаговая инструкция со скриншотами Госуслуг</small></a>';
+      '<small>Пошаговая инструкция со скриншотами Госуслуг — 490 ₽</small></a>';
   }
 
   box.innerHTML = html;
   box.style.display = 'block';
   if (box.scrollIntoView) box.scrollIntoView({behavior:'smooth', block:'start'});
 });
+
+if (PAY_URL) document.getElementById('buy').href = PAY_URL;
 </script>
 </body>
 </html>
